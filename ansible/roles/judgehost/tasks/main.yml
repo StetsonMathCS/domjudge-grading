@@ -34,6 +34,9 @@
 - name: Copy sudoers file for judgedaemon
   command: cp {{domjudge_folder}}/judgehost/etc/sudoers-domjudge /etc/sudoers.d
 
+- name: Copy judgehost config that disables CHROOT
+  template: src=templates/judgehost/judgehost-config.php dest={{domjudge_folder}}/judgehost/etc/judgehost-config.php
+
 - name: Copy judgehost Upstart script
   template: src=templates/judgehost/judgehost.upstart.conf dest=/etc/init/judgehost.conf
 

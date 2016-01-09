@@ -13,4 +13,6 @@
 
   roles:
     - common
+    - domserver
+    - judgehost
 
