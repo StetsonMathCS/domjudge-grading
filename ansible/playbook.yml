@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+
+  sudo: yes
+
+  vars:
+    domjudge_folder: /opt/domjudge
+    domjudge_version: 5.1.0
+
+  vars_files:
+    - vars/common-passwords.yml
+
+  roles:
+    - common
+
